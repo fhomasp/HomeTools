@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.peeterst.android.HomeTools"
+          android:versionCode="2"
+          android:versionName="1.0.1-snap">
+    <application android:label="@string/app_name" android:icon="@drawable/checklist_icon_front_lg" android:debuggable="true">
+        <activity android:name="com.peeterst.android.ChecklistMainActivity"
+                  android:label="@string/app_name"
+                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                  android:configChanges="orientation|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.peeterst.android.ChecklistIOActivity"
+                  android:theme="@android:style/Theme.Black"
+                  android:configChanges="orientation|keyboardHidden">
+        </activity>
+
+        <activity android:name="com.peeterst.android.checklistview.ChecklistUI"
+                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                  android:configChanges="orientation|keyboardHidden" />
+        <activity android:name="com.peeterst.android.checklistview.ChecklistEditUI"
+                  android:configChanges="orientation|keyboardHidden"/>
+        <activity android:name="com.peeterst.android.checklistview.ChecklistViewUI"
+                  android:configChanges="orientation|keyboardHidden"/>
+
+        <!--This is to show that activities in jars are allowed-->
+        <activity android:name="com.peeterst.android.dialogs.DialogWithInputBox"
+                  android:configChanges="orientation|keyboardHidden"/>
+
+        <activity android:name="com.peeterst.android.checklistview.ChecklistMoveListActivity"
+                  android:configChanges="orientation|keyboardHidden"
+                />
+        <activity android:name="com.peeterst.android.checklistview.ChecklistPeersActivity"
+                  android:configChanges="orientation|keyboardHidden"
+                />
+
+        <!--I/O stuff-->
+        <activity android:name="com.peeterst.android.checklistview.ChecklistEmailOutView"
+                  android:configChanges="orientation|keyboardHidden"
+                />
+        <activity android:name="com.peeterst.android.data.EmailSender"
+                  android:configChanges="orientation|keyboardHidden"
+                />
+        <activity android:name="com.peeterst.android.checklistview.ChecklistEmailInView"
+                  android:configChanges="orientation|keyboardHidden">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.PICK"/>
+                <action android:name="android.intent.action.GET_CONTENT"/>
+                <category android:name="android.intent.category.BROWSABLE" />
+                <action android:name="android.intent.action.EDIT" />
+                <data android:mimeType="text/xml"/>
+                <data android:scheme="content" android:mimeType="text/*" android:pathPattern=".*\\.xml"/>
+                <data android:scheme="file" android:mimeType="text/*" android:pathPattern=".*\\.xml"/>
+                <data android:scheme="http" android:mimeType="text/*" android:pathPattern=".*\\.xml"/>
+                <data android:scheme="https" android:mimeType="text/*" android:pathPattern=".*\\.xml"/>
+            </intent-filter>
+
+        </activity>
+
+        <activity android:name="com.peeterst.android.checklistview.ChecklistConnectActivity"
+                  android:configChanges="orientation|keyboardHidden"
+            />
+
+
+    </application>
+
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+</manifest>

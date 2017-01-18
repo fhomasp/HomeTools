@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<!--<?import com.peeterst.view.ChecklistsControllerController?>-->
+<?import com.peeterst.control.ChecklistItemControl?>
+<?import javafx.geometry.Insets?>
+<VBox id="checklistsContent" xmlns:fx="http://javafx.com/fxml" maxHeight="450" fx:id="checklists"
+      spacing="10" translateY="20" translateX="20" fx:controller="com.peeterst.view.ChecklistsController" >
+    <children>
+        <Label text="Checklists Panel" />
+        <!--<HBox spacing="10">-->
+        <!--<children>-->
+        <!--<Button text="Add !" onAction="#handleAction"  />-->
+        <!--<Button text="Remove !" onAction="#handleRemoveAction"  />-->
+        <!--&lt;!&ndash;<ChecklistItemControl fx:id="checklistTest" />&ndash;&gt;-->
+        <!--</children>-->
+        <!--</HBox>-->
+        <HBox spacing="420" translateY="5" translateX="5">
+            <children>
+                <Label text="Checklists: " />
+                <HBox fx:id="titleHbox" spacing="15">
+                    <Label text="Items of:"/>
+                    <TextField fx:id="checklistTitleField" id="checklistTitleField" styleClass="checklistTitleField"/>
+                </HBox>
+            </children>
+        </HBox>
+        <ScrollPane fx:id="parentScroller" id="parentScroller" prefHeight="360" fitToHeight="true" maxWidth="950">
+            <content>
+                <VBox spacing="10" id="scrollVbox"  >
+                <VBox spacing="10">
+                    <HBox fx:id="parentBox" spacing="100" prefHeight="280" maxHeight="300" minWidth="450" prefWidth="600"  >
+                        <padding>
+                            <Insets left="30" right="30" bottom="5" top="10"/>
+                        </padding>
+                        <children>
+                            <ScrollPane fx:id="checklistScrollPane" minWidth="400" prefWidth="400" minHeight="270"   >
+                                <content>
+                                    <VBox fx:id="checklistVBox"   spacing="20" alignment="CENTER_LEFT"  >
+                                        <padding >
+                                            <Insets left="110" top="15" bottom="10"  />
+                                        </padding>
+
+                                    </VBox>
+                                </content>
+                            </ScrollPane>
+
+                            <ScrollPane fx:id="itemScrollPane" minWidth="400" prefWidth="400" minHeight="270">
+                                <content>
+                                    <VBox fx:id="checklistItemVBox" spacing="15" alignment="CENTER_LEFT"   >
+                                        <padding >
+                                            <Insets left="10" top="15" bottom="10"  />
+                                        </padding>
+                                    </VBox>
+                                </content>
+                            </ScrollPane>
+                        </children>
+                    </HBox>
+                    <HBox fx:id="checklistAndItemAddControls" spacing="470">
+                        <padding >
+                            <Insets left="40" top="1" bottom="1"  />
+                        </padding>
+                        <children>
+                            <Button fx:id="addChecklistButton" text="+" onAction="#addChecklist"  />
+                            <Button fx:id="addChecklistItemButton" text="+" onAction="#addChecklistItem" />
+                        </children>
+                    </HBox>
+                </VBox>
+
+
+                <HBox fx:id="checklistActionBox" spacing="10" minHeight="50">
+                    <padding>
+                        <Insets right="30" bottom="10" top="5"/>
+                    </padding>
+                    <children>
+                        <Button fx:id="saveButton" text="Save" onAction="#saveAction" disable="true" />
+                        <Button fx:id="revertButton" text="Revert" onAction="#handleRevertAction" disable="true"/>
+                    </children>
+                </HBox>
+                </VBox>
+            </content>
+        </ScrollPane>
+
+    </children>
+</VBox>

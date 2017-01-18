@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:descendantFocusability="beforeDescendants"
+                android:focusableInTouchMode="true"
+    >
+                <!--android:background="@drawable/paper"-->
+
+    <EditText android:id="@+id/title"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:layout_alignParentLeft="true"
+              android:paddingBottom="15dip"
+            />
+
+    <TextView
+            android:id="@+id/checklistview_datepicker"
+            android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true" />
+
+    <LinearLayout android:id="@+id/ChecklistEditControls"
+                  android:orientation="horizontal"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentBottom="true"
+                  style="@android:style/ButtonBar" android:gravity="center_horizontal"
+            >
+
+        <ImageButton android:id="@+id/confirm"
+                     android:src="@drawable/save_icon"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginBottom="3dip"
+                />
+
+        <ImageButton android:id="@+id/pick_date_calendar"
+                     android:src="@drawable/calendar_icon"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginBottom="3dip"
+                />
+
+        <ImageButton android:id="@+id/edituiback"
+                     android:src="@drawable/arrow_left_32x"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginBottom="3dip"
+                />
+
+        <ImageButton android:id="@+id/addchecklistitem"
+                     android:src="@drawable/plus_icon_32x"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginBottom="3dip"
+                />
+
+    </LinearLayout>
+
+
+    <ListView android:id="@+id/android:list"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/title"
+              android:layout_above="@id/ChecklistEditControls"
+              android:paddingTop="8dip"
+              android:paddingBottom="8dip"
+               />
+    <TextView android:id="@+id/android:empty"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/no_notes"
+              android:layout_below="@id/title"
+              android:layout_above="@id/ChecklistEditControls"
+              android:paddingTop="10dip"
+              android:paddingBottom="15dip"/>
+
+    <!--<TextView android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content" -->
+    <!--android:text="@string/body" />-->
+    <!--<EditText android:id="@+id/body" android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:scrollbars="vertical" />-->
+
+
+
+</RelativeLayout>

@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+
+    <LinearLayout android:id="@+id/connectbuttonbar"
+                  android:orientation="horizontal"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentBottom="true"
+                  style="@android:style/ButtonBar" android:gravity="center_horizontal">
+
+
+
+        <ImageButton
+            android:id="@+id/connectbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dip"
+            android:src="@drawable/connect_32x"
+            />
+
+        <ImageButton
+            android:id="@+id/disconnectbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dip"
+            android:src="@drawable/stop_32x"
+            />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/connectlistpanel"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp">
+
+        <ListView  android:id="@+id/connectcontactslistview"
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingTop="-10dip"
+
+            />
+        <TextView android:id="@+id/contacts_empty"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/no_contacts"
+                  android:paddingTop="-10dip"
+            />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="0dip"
+        android:scrollbars="none"
+        android:fillViewport="false"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/connectlistpanel"
+        android:layout_centerVertical="true"
+        android:id="@+id/parameterscrollpanel"
+        android:layout_above="@id/connectbuttonbar"
+        android:paddingTop="0dip"
+        android:layout_marginBottom="5dip"
+        android:layout_marginTop="5dip"
+        android:layout_marginLeft="0dip"
+        android:layout_marginRight="0dip"
+
+        >
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content">
+            <RelativeLayout
+                android:descendantFocusability="beforeDescendants"
+                android:focusableInTouchMode="true"
+                android:id="@+id/parameterspanel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dip"
+
+                >
+
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/idlabel"
+                    android:text="@string/networkidlabel"
+                    android:layout_alignParentTop="true"
+                    android:paddingBottom="5dip"
+                    android:paddingTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10dip"
+                    />
+
+                <EditText
+                    android:ems="10"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/networkid"
+                    android:layout_toRightOf="@id/idlabel"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="10dp"
+                    android:padding="2dp"
+                    style="@android:style/TextAppearance.Small.Inverse"
+                    android:background="#FFF"
+                    android:inputType="text"
+                    android:layout_alignBottom="@+id/idlabel"/>
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/clientnamelabel"
+                    android:text="@string/clientnamelabel"
+                    android:layout_below="@id/idlabel"
+                    android:paddingBottom="5dip"
+                    android:paddingTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="10dip"
+                    />
+
+                <EditText
+                    android:ems="10"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/clientname"
+                    android:layout_toRightOf="@id/clientnamelabel"
+                    android:layout_below="@id/networkid"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dip"
+                    android:padding="2dp"
+                    android:background="#FFF"
+                    style="@android:style/TextAppearance.Small.Inverse"
+                    android:inputType="text"
+                    android:layout_alignBottom="@+id/clientnamelabel"/>
+                <!--style="@style/EditTextHoloDark"-->
+
+                <ImageButton
+                    android:id="@+id/contacts_savebutton"
+                    android:src="@drawable/save_icon_16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/clientname"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:paddingBottom="0dip"
+                    android:paddingTop="0dp"
+                    android:layout_marginLeft="50dip"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="qsdf"/>
+
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/portlabel"
+                    android:text="@string/portlabel"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/clientnamelabel"
+                    android:paddingBottom="5dip"
+                    android:paddingTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="10dip"
+                    />
+
+                <EditText
+                    android:ems="10"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/port"
+                    android:layout_toRightOf="@id/portlabel"
+                    android:layout_below="@id/clientname"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dip"
+                    android:padding="2dp"
+                    android:background="#FFF"
+                    android:inputType="number"
+                    style="@android:style/TextAppearance.Small.Inverse"
+                    />
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/serverlabel"
+                    android:text="@string/serverlabel"
+                    android:layout_below="@id/portlabel"
+                    android:paddingBottom="5dip"
+                    android:paddingTop="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10dip"
+                    />
+
+                <EditText
+                    android:ems="10"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/server"
+                    android:layout_toRightOf="@id/serverlabel"
+                    android:layout_below="@id/port"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dip"
+                    android:padding="2dp"
+                    style="@android:style/TextAppearance.Small.Inverse"
+                    android:background="#FFF"
+                    android:inputType="text"/>
+
+
+
+                <EditText
+                    android:ems="10"
+                    android:layout_width="220dp"
+                    android:id="@+id/servertalkfield"
+                    android:layout_below="@id/server"
+                    android:paddingBottom="10dip"
+                    android:paddingTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:textSize="12dip"
+                    style="@style/EditTextHoloDark"
+                    android:layout_height="45dp"
+                    android:inputType="text"
+                    />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dip"
+                    android:src="@drawable/send_icon"
+                    android:background="@android:color/transparent"
+                    android:text="@string/sendbutton"
+                    android:id="@+id/sendbutton"
+                    android:layout_toRightOf="@id/servertalkfield"
+                    android:layout_below="@id/server"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="30dip"
+                    android:paddingBottom="10dip"
+                    android:paddingTop="10dp"
+                    android:textSize="10dip"
+                    />
+
+                <RadioGroup android:id="@+id/client_server_modegroup"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            android:layout_below="@id/servertalkfield"
+                            android:orientation="horizontal"
+                    >
+
+                    <ToggleButton android:id="@+id/client_mode_button"
+                                  android:layout_height="wrap_content"
+                                  android:layout_width="wrap_content"
+                                  android:layout_weight="1"
+                                  android:textSize="12sp"
+                                  android:textOn="@string/client_mode"
+                                  android:textOff="@string/client_mode"
+                                  android:onClick="onToggle"
+                                  android:checked="true"
+                        />
+                    <ToggleButton android:id="@+id/server_mode_button"
+                                  android:layout_height="wrap_content"
+                                  android:layout_width="wrap_content"
+                                  android:layout_weight="1"
+                                  android:textSize="12sp"
+                                  android:textOn="@string/server_mode"
+                                  android:textOff="@string/server_mode"
+                                  android:onClick="onToggle"
+                        />
+                </RadioGroup>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
+

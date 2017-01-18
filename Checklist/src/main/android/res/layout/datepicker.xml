@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+        >
+
+    <!--<ImageView android:id="@+id/CalendarImage"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerHorizontal="true" />-->
+
+
+        <!--android:fillViewport="true"
+                android:orientation="vertical"  android:id="@+id/CalendarScrollView"  -->
+
+
+
+    <LinearLayout android:id="@+id/CalendarControls"
+                  android:orientation="horizontal"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentBottom="true"
+                  style="@android:style/ButtonBar"
+            >
+
+        <Button android:id="@+id/CalendarSetButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:paddingBottom="6dip"
+                android:text="@string/set" />
+        <!--android:layout_weight="1"-->
+
+        <Button android:id="@+id/CalendarCancelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:paddingBottom="6dip"
+                android:text="@string/cancel" />
+        <!--android:layout_weight="1"-->
+
+
+
+
+    </LinearLayout>
+
+
+
+
+    <ScrollView
+                android:id="@+id/CalendarScrollView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/CalendarControls"
+                android:layout_alignParentTop="true"
+                android:scrollbars="none"
+                android:paddingTop="-10dip"
+            >
+    <!--android:layout_marginBottom="5dip"
+                android:layout_marginTop="5dip" android:fillViewport="true"-->
+
+        <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="-5dip"
+                        android:layout_marginTop="-5dip"
+                >
+
+            <TextView   android:id="@+id/calendarTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/calendartitletext"
+                        android:layout_alignParentTop="true"
+                        android:textSize="16dip"
+                        android:textColor="#f5f5f5"
+                        android:paddingBottom="10dip"
+                        android:paddingTop="0dip"
+                    />
+
+            <TextView android:id="@+id/datePickerHeader"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_centerHorizontal="true"
+                      android:paddingTop="10dip"
+                      android:paddingBottom="10dip"
+                      android:layout_below="@id/calendarTitle"
+                      android:textColor="#f5f5f5"
+                      android:textSize="14dip"
+                    />
+
+            <com.peeterst.android.component.CustomizedDatePicker android:id="@+id/calendarDatePicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:paddingTop="10dip"
+                        android:paddingBottom="10dip"
+                        android:layout_alignBaseline="@id/datePickerHeader"
+                    />
+
+            <TimePicker android:id="@+id/calendarTimePicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:paddingTop="10dip"
+                        android:paddingBottom="10dip"
+                        android:layout_marginTop="50dip"
+                        android:layout_below="@id/calendarDatePicker"
+                        />
+
+            <CheckBox android:id="@+id/calendarCheckbox"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_centerHorizontal="true"
+                      android:layout_below="@id/calendarTimePicker"
+                      android:checked="false"
+                      android:text="@string/calendarcheckboxlabel"
+                      android:textSize="12dip"
+                      android:paddingTop="20dip"
+                      android:paddingBottom="20dip"
+                      android:layout_marginTop="20dip"
+                    />
+
+            <!-- TODO: find another view type, gridview is not good enough -->
+            <GridView
+                      android:id="@+id/CalendarsGrid"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/calendarCheckbox"
+                      android:padding="5dip"
+                      android:paddingLeft="15dip"
+                      android:paddingRight="15dip"
+                      android:verticalSpacing="5dip"
+                      android:horizontalSpacing="20dip"
+                      android:numColumns="1"
+                      android:columnWidth="60dip"
+                      android:stretchMode="columnWidth"
+                      android:gravity="center_horizontal"
+                      >
+
+            </GridView>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

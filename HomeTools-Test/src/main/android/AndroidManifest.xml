@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        package="com.peeterst.android.test"
+        android:versionCode="1"
+        android:versionName="1.0">
+
+    <application  android:label="Hometools-test">
+        <uses-library android:name="android.test.runner"/>
+    </application>
+    <!--<uses-permission android:name="android.permission.RUN_INSTRUMENTATION" />-->
+
+
+    <instrumentation android:name="android.test.InstrumentationTestRunner"
+               android:targetPackage="com.peeterst.android.hourtracker" android:label="Tests for Hourtracker" />
+
+</manifest>

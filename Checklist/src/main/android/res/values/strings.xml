@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Checklist Manager</string>
+    <string name="main_tools_button">Checklist Management</string>
+
+
+    <!--Checklist items-->
+    <string name="view_hecklists">View Checklists</string>
+    <string name="checklist_main_label">View</string>
+    <string name="view_tab">View</string>
+    <string name="io_tab">I/O</string>
+
+    <!--Notepad demo strings-->
+    <string name="no_notes">No checklist Yet</string>
+    <string name="menu_insert">Add Checklist</string>
+    <string name="menu_delete">Delete Checklist</string>
+    <string name="menu_send_email">Send by email</string>
+    <string name="title">Title</string>
+    <string name="body">Body</string>
+    <string name="confirm">Confirm</string>
+    <string name="pick_date_calendar">(ins cal..)</string>
+    <string name="edit_note">Edit Checklist</string>
+
+    <string name="create_bullet">New Bullet</string>
+    <string name="delete_bullet">Delete Bullet</string>
+    <string name="move_to_other">Move to another checklist</string>
+    <string name="move_checked_to_other">Move all checked to another checklist</string>
+    <string name="move_unchecked_to_other">Move all unchecked to another checklist</string>
+
+    <string name="send_out">Send...</string>
+    <string name="io_delete">Delete</string>
+    <string name="io_import">Import</string>
+
+    <string name="cancel">Cancel</string>
+    <string name="set">Set</string>
+    <string name="calendartitletext">Set target date / Insert into Calendar</string>
+    <string name="calendarcheckboxlabel">Insert into Android calendar?</string>
+
+    <string name="toemailout1">The checklist</string>
+    <string name="toemailout2">has been placed in the Outbox</string>
+    <string name="toemailout">Sent to the Outbox (See I/O tab)</string>
+    <string name="toemailin">has been placed in the Inbox</string>
+
+    <string name="io_title">Input / Output Panel</string>
+    <string name="io_inbox">Inbox items: </string>
+    <string name="io_outbox">Outbox items: </string>
+    <string name="io_calendaritems">Calendar entries</string>
+    <string name="io_sync">In synchronization</string>
+
+    <string name="client_connect_title">Network Access</string>
+    <string name="serverlabel">Server:</string>
+    <string name="sendbutton">Send</string>
+    <string name="portlabel">Port:</string>
+    <string name="clientnamelabel">Peer ID:</string>
+    <string name="networkidlabel">Your ID:</string>
+    <string name="no_contacts">No contacts saved</string>
+    <string name="contacts_row_imagedescription">Contacts</string>
+    <string name="connect_status_title">Checklist Network</string>
+    <string name="connect_status_enabled">connected!</string>
+    <string name="connect_status_disabled">disconnected !</string>
+    <string name="contact_already_in_db">Your contact is already stored in the database</string>
+    <string name="connect_server_disconnect">Server closed connection</string>
+    <string name="contacts_row_load">load</string>
+    <string name="connection_setup_error">Error connecting</string>
+    <string name="connection_setup_timeout">Connection timeout..</string>
+    <string name="checklist_invalid_format">The input has an invalid format</string>
+    <string name="network_error">Network error during input</string>
+    <string name="client_mode">CLIENT MODE</string>
+    <string name="server_mode">SERVER MODE</string>
+    <string name="connect_serving_stopped">Server is DOWN</string>
+    <string name="server_status_enabled">Serving!</string>
+    <string name="incoming_checklist">Incoming checklist</string>
+    <string name="from">from</string>
+    <string name="view_checklist">View Checklist</string>
+    <string name="io_send_network">send through network</string>
+    <string name="not_connected">Not connected, connect first!</string>
+    <string name="no_network">No Network, connect to network. Wifi is preferred (IP access range)</string>
+
+</resources>

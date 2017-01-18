@@ -1,0 +1,28 @@
+11-04 02:49:11.992: INFO/ActivityManager(60):
+Displayed activity com.peeterst.android.HomeTools/com.peeterst.android.ChecklistMainActivity: 29182 ms (total 29182 ms)
+
+
+11-05 22:39:44.314: INFO/ActivityManager(59):
+Displayed activity com.peeterst.android.HomeTools/com.peeterst.android.ChecklistMainActivity: 15216 ms (total 15216 ms)
+
+
+11-08 23:15:52.783: INFO/ActivityManager(59):
+Displayed activity com.peeterst.android.HomeTools/com.peeterst.android.ChecklistMainActivity: 14963 ms (total 14963 ms)
+
+11-11 04:38:15.844: INFO/ActivityManager(59):
+Displayed activity com.peeterst.android.HomeTools/com.peeterst.android.ChecklistMainActivity: 11201 ms (total 11201 ms)
+
+
+
+//from filled DB
+11-05 22:33:46.855: INFO/ActivityManager(59):
+Displayed activity com.peeterst.android.HomeTools/com.peeterst.android.ChecklistMainActivity: 7180 ms (total 7180 ms)
+
+11-08 23:17:20.884: INFO/ActivityManager(59):
+Displayed activity com.peeterst.android.HomeTools/com.peeterst.android.ChecklistMainActivity: 14842 ms (total 14842 ms)
+
+11-10 18:48:57.893: INFO/ActivityManager(59):
+Displayed activity com.peeterst.android.HomeTools/com.peeterst.android.ChecklistMainActivity: 4112 ms (total 4112 ms)
+
+11-11 04:39:09.764: INFO/ActivityManager(59):
+Displayed activity com.peeterst.android.HomeTools/com.peeterst.android.ChecklistMainActivity: 4175 ms (total 4175 ms)

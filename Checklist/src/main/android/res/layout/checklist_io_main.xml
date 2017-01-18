@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+    <TextView
+            android:id="@+id/main_io_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_alignParentTop="true"
+            android:textSize="16px"
+            android:text="@string/io_title"
+            android:padding="8dip"
+            />
+
+    <LinearLayout android:id="@+id/ChecklistIOButtonBar"
+                  android:orientation="horizontal"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentBottom="true"
+                  style="@style/ChecklistButtonBar" android:gravity="center_horizontal"
+            >
+
+        <ImageButton
+                android:id="@+id/main_io_inboxbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/mail_inbox_32"
+                android:layout_marginBottom="3dip"
+
+                />
+
+        <ImageButton
+                android:id="@+id/main_io_outboxbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/main_io_inboxbutton"
+                android:layout_marginBottom="3dip"
+                android:src="@drawable/mail_outbox_32"
+                />
+
+        <ImageButton
+            android:id="@+id/main_io_connect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_io_outboxbutton"
+            android:layout_marginBottom="3dip"
+            android:src="@drawable/connect_32x"
+            />
+
+
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+            android:id="@+id/main_io_infopanel"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="5dip"
+            android:layout_above="@id/ChecklistIOButtonBar"
+            android:layout_below="@id/main_io_title"
+            >
+
+        <!--<ImageButton-->
+                <!--android:id="@+id/main_io_inboxbutton"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:src="@drawable/email_in_icon"-->
+                <!--android:layout_alignParentLeft="true"-->
+
+                <!--/>-->
+
+        <TextView
+                android:id="@+id/main_io_inboxtxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/io_inbox"
+                android:textSize="15px"
+                android:layout_marginRight="50dp"
+                android:padding="10dip"
+                />
+        <!--android:padding="5dip"-->
+
+        <TextView
+                android:id="@+id/main_io_inboxq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15px"
+                android:text="11"
+                android:layout_toRightOf="@id/main_io_inboxtxt"
+                android:padding="10dip"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="30dp"
+                />
+        <ImageButton
+            android:id="@+id/main_io_inboxbuttonInline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mail_inbox_22x"
+            android:layout_alignParentRight="true"
+
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="70dp"
+            android:padding="4dp"
+            android:adjustViewBounds="true"/>
+
+
+
+        <TextView
+                android:id="@+id/main_io_outboxtxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/main_io_inboxtxt"
+                android:layout_alignParentLeft="true"
+                android:text="@string/io_outbox"
+                android:layout_marginRight="49dp"
+                android:textSize="15px"
+                android:padding="10dip"
+                />
+
+        <TextView
+                android:id="@+id/main_io_outboxq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15px"
+                android:text="11"
+                android:layout_below="@id/main_io_inboxq"
+                android:layout_toRightOf="@id/main_io_outboxtxt"
+                android:padding="10dip"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="30dp"
+                />
+
+        <ImageButton
+            android:id="@+id/main_io_outboxbuttonInline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_io_inboxbuttonInline"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="3dip"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="70dp"
+            android:padding="4dp"
+            android:src="@drawable/mail_outbox_22x"
+            android:adjustViewBounds="true"/>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
