@@ -9,7 +9,7 @@
     <artifactId>Checklist</artifactId>
     <version>1.0.1</version>
 
-    <packaging>apk</packaging>
+    <!--<packaging>apk</packaging>-->
     <name>Checklist</name>
 
     <build>
