@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import com.peeterst.control.ChecklistControl?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+        fx:controller="com.peeterst.view.ChecklistModalController" styleClass="main-client">
+    <!--prefWidth="200" maxWidth="200" prefHeight="600" maxHeight="600"-->
+    <padding >
+        <Insets right="10" top="15" left="15" bottom="10" />
+    </padding>
+    <children>
+
+        <HBox fx:id="checklistHBox" spacing="15">
+            <children>
+                <Label fx:id="checklistLabel"/>
+                <Label fx:id="targetDateLabel"/>
+            </children>
+        </HBox>
+        <VBox fx:id="checklistVBox" id="checklistVBox" spacing="20" >
+            <padding >
+                <Insets right="10" top="15" left="15" bottom="10" />
+            </padding>
+        </VBox>
+        <HBox id="buttonPanel" spacing="15">
+            <padding >
+                <Insets right="10" top="15" left="15" bottom="10" />
+            </padding>
+            <children>
+                <Button text="Import" onAction="#importChecklist"/>
+                <Button text="Discard" onAction="#discardChecklist"/>
+            </children>
+        </HBox>
+    </children>
+
+
+
+
+</VBox>

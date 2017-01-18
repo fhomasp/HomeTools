@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="EditTextHoloDark" parent="android:style/Widget.EditText">
+        <item name="android:background">@drawable/edit_text_holo_dark</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+    <style name="ChecklistButtonBar">
+        <item name="android:paddingTop">5dip</item>
+        <item name="android:paddingLeft">4dip</item>
+        <item name="android:paddingRight">4dip</item>
+        <item name="android:paddingBottom">1dip</item>
+        <item name="android:background">@drawable/checklist_bottom_bar</item>
+    </style>
+</resources>

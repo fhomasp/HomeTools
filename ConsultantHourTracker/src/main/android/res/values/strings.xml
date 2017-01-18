@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Consultant Hour Tracker</string>
+
+    <string name="main.clients.title">Active Clients</string>
+    <string name="main.clients.actions.title">Actions Available</string>
+    <string name="main.clients.noclients">No active clients found</string>
+
+</resources>

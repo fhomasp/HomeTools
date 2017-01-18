@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+		<groupId>com.thomas.hometools</groupId>
+		<artifactId>HomeTools</artifactId>
+		<version>1.0</version>
+	</parent>
+    <artifactId>Checklist</artifactId>
+    <version>1.0.1</version>
+
+    <packaging>apk</packaging>
+    <name>Checklist</name>
+
+    <build>
+        <!-- This should be just the artifact identifier, no version on the APK file,
+             because this is what IntelliJ will use by default.
+        -->
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <!--<plugin>-->
+                <!--<groupId>com.jayway.maven.plugins.android.generation2</groupId>-->
+                <!--<artifactId>maven-android-plugin</artifactId>-->
+                <!--<version>2.8.4</version>-->
+                <!--<configuration>-->
+                    <!--<sdk>-->
+
+                        <!--&lt;!&ndash; Don't forget to set your ANDROID_HOME environment variable to your SDK directory! &ndash;&gt;-->
+                        <!--<path>${env.ANDROID_HOME}</path>-->
+
+                        <!--&lt;!&ndash; Platform 8 is Android 2.2 &ndash;&gt;-->
+                        <!--<platform>8</platform>-->
+
+                    <!--</sdk>-->
+                    <!--<emulator>-->
+                        <!--<avd>Android_VD</avd>-->
+
+                    <!--</emulator>-->
+
+                    <!--&lt;!&ndash; All of these go into the /src/main/android/ directory, we don't-->
+                         <!--want to polute the project root directory. &ndash;&gt;-->
+                    <!--<androidManifestFile>src/main/android/AndroidManifest.xml</androidManifestFile>-->
+                    <!--<resourceDirectory>src/main/android/res</resourceDirectory>-->
+                    <!--<assetsDirectory>src/main/android/assets</assetsDirectory>-->
+                    <!--<nativeLibrariesDirectory>src/main/android/native</nativeLibrariesDirectory>-->
+                    <!--<resourceOverlayDirectory>src/main/android/overlay</resourceOverlayDirectory>-->
+
+
+                    <!--&lt;!&ndash; Read the Android Maven plugin documentation about these settings &ndash;&gt;-->
+                    <!--<deleteConflictingFiles>true</deleteConflictingFiles>-->
+                    <!--<undeployBeforeDeploy>true</undeployBeforeDeploy>-->
+
+                <!--</configuration>-->
+                <!--<extensions>true</extensions>-->
+            <!--</plugin>-->
+        </plugins>
+    </build>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>com.thomas.hometools</groupId>
+            <artifactId>Common</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.apache.commons</groupId>-->
+            <!--<artifactId>commons-io</artifactId>-->
+            <!--<version>1.3.2</version>-->
+        <!--</dependency>-->
+
+
+
+        <!-- INSTALL: These need to be inserted in the artifact repo (if eventually used) -->
+        <!--<dependency>-->
+            <!--<groupId>android.adjusted</groupId>-->
+            <!--<artifactId>additionnal-awt</artifactId>-->
+            <!--<version>1.0</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>android.adjusted</groupId>-->
+            <!--<artifactId>activation</artifactId>-->
+            <!--<version>1.0</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>android.adjusted</groupId>-->
+            <!--<artifactId>mail</artifactId>-->
+            <!--<version>1.0</version>-->
+        <!--</dependency>-->
+        <!-- /INSTALL -->
+
+
+    </dependencies>
+
+    <profiles>
+        <profile>
+            <id>sign</id>
+
+            <build>
+                <finalName>${project.artifactId}-${project.version}</finalName>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-jarsigner-plugin</artifactId>
+                        <version>1.2</version>
+                        <executions>
+                            <execution>
+                                <id>signing</id>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                                <phase>package</phase>
+                                <!--<inherited>true</inherited>-->
+                                <configuration>
+                                    <arguments>
+                                        <argument>-sigalg</argument><argument>MD5withRSA</argument>
+                                        <argument>-digestalg</argument><argument>SHA1</argument>
+                                    </arguments>
+                                    <archiveDirectory></archiveDirectory>
+                                    <includes>
+                                        <include>target/*.apk</include>
+                                    </includes>
+                                    <keystore>${project.basedir}/src/main/keystore/com.peeterst</keystore>
+                                    <storepass>${store.pass}</storepass>
+                                    <keypass>${store.pass}</keypass>
+                                    <alias>peeterst</alias>
+
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                        <artifactId>android-maven-plugin</artifactId>
+                        <inherited>true</inherited>
+                        <configuration>
+                            <sign>
+                                <debug>false</debug>
+                            </sign>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+    
+</project>

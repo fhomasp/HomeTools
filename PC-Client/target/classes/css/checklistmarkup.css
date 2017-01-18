@@ -1,0 +1,30 @@
+
+.checklist-control {
+    -fx-skin: "com.peeterst.skin.ChecklistSkin";
+    -fx-background-color: transparent;
+}
+
+.label {
+    -fx-font-size: 12px;
+    -fx-font-weight: normal;
+    /*-fx-effect: dropshadow(gaussian,rgba(255,255,255,0.5),0,0,0,1);*/
+}
+
+.checklistbox:hover{
+     -fx-background-color: darkgray;
+ }
+
+.checklistbox:pressed{
+    -fx-background-color: linear-gradient(#2A5058, #61a2b1);
+}
+
+.checklistbox{
+    -fx-background-color: transparent;
+}
+
+.deleteButton {
+    -fx-background-size: 20 20;
+    -fx-graphic: url('../img/delete_rnd_icon.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:left;
+}

@@ -1,0 +1,3 @@
+redir add tcp:54321:12345OK
+
+telnet localhost 5554

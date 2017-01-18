@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="6dip"
+                android:background="@android:drawable/menuitem_background"
+                android:id="@+id/calendar_row"
+        >
+    <!--<CheckBox-->
+            <!--android:id="@+id/agendacombo"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_marginRight="6dip"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:focusable="false"-->
+            <!--android:background="@drawable/checkbox_background"-->
+            <!--android:button="@drawable/checkbox"-->
+            <!--/>-->
+    <RadioButton
+            android:id="@+id/agendacombo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="6dip"
+            android:layout_centerHorizontal="true"
+            android:focusable="false"
+            android:background="@drawable/checkbox_background"
+            android:button="@drawable/checkbox"
+            />
+
+    <TextView
+            android:id="@+id/agendaname"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@id/agendacombo"
+            android:layout_marginLeft="6dip"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="5dip"
+            android:textSize="18px"
+
+            />
+
+</RelativeLayout>

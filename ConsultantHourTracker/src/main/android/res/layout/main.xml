@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:baselineAligned="false"
+              android:orientation="vertical"
+        >
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/ActiveClientOverview"
+            android:layout_weight="3"
+            >
+
+        <TextView
+                android:id="@+id/MainClientsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main.clients.title"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:padding="10dip"
+                >
+
+        </TextView>
+
+
+        <!--
+
+            empty = (TextView)findViewById(R.id.empty1);
+            list = (ListView)findViewById(R.id.list1);
+            list.setEmptyView(empty);
+            http://wiresareobsolete.com/wordpress/2010/08/adapting-to-empty-views/
+
+        -->
+        <ListView android:id="@+id/android:list"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@id/MainClientsTitle"
+                  android:paddingTop="8dip"
+                  android:paddingBottom="5dip"
+                />
+        <TextView android:id="@+id/android:empty"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/main.clients.noclients"
+                  android:layout_below="@id/MainClientsTitle"
+                  android:paddingTop="10dip"
+                  android:layout_centerInParent="true"
+                  android:paddingBottom="5dip"
+                  android:textSize="12dip"
+                />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout android:layout_width="fill_parent"
+                  android:layout_height="fill_parent"
+                  android:layout_weight="1"
+
+            >
+        <TextView
+                android:id="@+id/MainActionsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main.clients.actions.title"
+                android:layout_centerInParent="true"
+                android:padding="10dip"
+
+                >
+        </TextView>
+    </RelativeLayout>
+
+</LinearLayout>
