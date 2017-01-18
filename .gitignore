@@ -45,3 +45,10 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+/Checklist/target/
+.idea/
+Checklist/Checklist.iml
+Common/Common.iml
+HomeTools.iml
+/Common/target/
+!/Checklist/target/
